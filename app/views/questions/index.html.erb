@@ -1,0 +1,17 @@
+<h2>Questions</h2>
+<ul>
+  <% @questions.each do |question| %>
+    <li>
+      <a href="<%= question_path(question) %>">
+        <p class='question-content'>
+          <%= question.content%>
+          </p>
+        <p class='question-description'>
+          <%= question.description %>
+        </p>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Question", new_question_path %>
